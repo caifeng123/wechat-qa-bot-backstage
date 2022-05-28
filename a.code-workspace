@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+	],
+	"settings": {
+		"eslint.validate": [
+			"javascript",
+			"javascriptreact",
+			"typescriptreact",
+			"autoFix",
+			"typescript"
+		],
+		"editor.formatOnType": false, //编辑时是否自动格式化
+		"editor.formatOnSave": false,
+		"javascript.format.enable": false,
+		"javascript.validate.enable": false, // 编辑器的代码js检查
+		"typescript.validate.enable": true, // 编辑器的代码ts检查
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"files.eol": "\n",
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"eslint.format.enable": true,
+		"eslint.debug": true,
+		"eslint.lintTask.enable": true,
+		"eslint.nodePath": "./node_modules",
+		"prettier.bracketSpacing": false,
+		"prettier.semi": true,
+		"[typescriptreact]": {
+			"editor.defaultFormatter": "vscode.typescript-language-features"
+		},
+		"git.ignoreLimitWarning": true
+	}
+}
