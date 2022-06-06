@@ -63,6 +63,14 @@ export async function rule(
   });
 }
 
+/** 新建规则 PUT /api/detail */
+export async function getDetail(options?: { [key: string]: any }) {
+  return request<API.RuleListItem>("/api/detail", {
+    method: "GET",
+    params:options
+  });
+}
+
 /** 新建规则 PUT /api/rule */
 export async function updateRule(options?: { [key: string]: any }) {
   return request<API.RuleListItem>("/api/rule", {
