@@ -18,8 +18,6 @@ const Content = ({data = {}}) => {
     const final = useRef<HTMLDivElement>();
     useEffect(() => {
         final.current.scrollIntoView();
-        console.log(final.current);
-
     }, [data]);
     return (
         <>

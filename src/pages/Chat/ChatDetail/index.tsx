@@ -3,6 +3,7 @@ import {Layout} from 'antd';
 import {useEffect, useState} from 'react';
 import {useModel} from 'umi';
 import ChatContent from './ChatContent';
+import DialogInput from './DialogInput';
 
 const {Header, Footer, Sider, Content} = Layout;
 const ChatDetail = ({detail = {}, userInfo = {}}) => {
@@ -21,7 +22,9 @@ const ChatDetail = ({detail = {}, userInfo = {}}) => {
             <Content style={{overflow: 'scroll'}}>
                 <ChatContent data={data} userInfo={userInfo} />
             </Content>
-            <Footer>Footer</Footer>
+            <Footer style={{padding: 0}}>
+                <DialogInput />
+            </Footer>
         </>
     );
 };
