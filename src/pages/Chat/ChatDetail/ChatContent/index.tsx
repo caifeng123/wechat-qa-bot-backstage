@@ -1,5 +1,6 @@
 import {Wrapper} from './ui';
 import _ from 'lodash';
+import {useEffect, useRef} from 'react';
 
 const Line = ({text, updateTime, isFrom, userInfo}) => {
     return (
@@ -14,6 +15,12 @@ const Line = ({text, updateTime, isFrom, userInfo}) => {
 const Content = ({data = {}}) => {
     console.log(data);
     const {list = [], userInfo, toUserInfo} = data;
+    const final = useRef<HTMLDivElement>();
+    useEffect(() => {
+        final.current.scrollIntoView();
+        console.log(final.current);
+
+    }, [data]);
     return (
         <>
             {
@@ -26,6 +33,7 @@ const Content = ({data = {}}) => {
                     />
                 ))
             }
+            <div ref={final} />
         </>
     );
 };
